@@ -1,14 +1,19 @@
 
 
-let alumno = prompt("por favor ingrese su nombre").toLowerCase()
+let ingresarNombre = prompt("Ingrese su nombre");
 
-let nota1 = Number(prompt("ingrese la nota del primer TP"))
-let nota2 = Number(prompt("ingrese la nota de la evaluacion"))
-let nota3 = Number(prompt("ingrese nota de la integradora"))
+let ingreseApellido = prompt("ingrese su apellido");
 
-let promedio = (nota1 + nota2 + nota3) / 3 
+if ((ingresarNombre !="") && (ingreseApellido !="")){
+    alert("nombre: "+ingresarNombre +"\napellido: "+ingreseApellido);
+}
 
-alert (alumno + " " + "su promedio es " + promedio)
+let notainvalida = true ;
+
+
+while (notainvalida) {
+
+    let promedio = prompt ("ingrese su promedio");
 
 if ( promedio >= 8 ) {
     console.log ("estas aprobado")
@@ -19,5 +24,11 @@ alert ("pasaste raspando")
 } else if (promedio <= 6) {
     console.log ("desaprobado")
     alert ("vas a tener que repetir")
+
+notainvalida = false;
+}else {
+    alert ("ingrese una nota valida");
 }
+    }
+
 
