@@ -1,13 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comision49815</title>
+    <title>49815 mozdzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Mi primer proyecto</h1>
+<body class="mainBackground">
+<!-- TITULO -->
+<!--FORMULARIO-->
+    <div id="formulario">
+        <form id="userForm" >
+            <label class="labelForm" for="nombre">Nombre</label>
+            <input class="campoForm" type="text" id="nombre" placeholder="Ingresa tu Nombre" required>
+            <label class="labelForm" for="apellido">Apellido</label>            
+            <input class="campoForm" type="text" id="apellido" placeholder="Ingresa tu Apellido" required>
+            <label class="labelForm" for="edad">Edad</label>            
+            <input class="campoForm" type="number" id="edad" placeholder="Ingresa tu edad" required>
+            <label class="labelForm" for="colegio">Colegio</label>            
+            <input class="campoForm" type="text" id="colegio" placeholder="Ingresa el nombre de tu Colegio" required >
+            <label class="labelForm" for="pais">Pais</label>          
+            <input class="campoForm" type="text" id="pais" placeholder="Ingresa tu País" required>
+            <a><button id="iniciarJuego" type="submit">Iniciar Juego</button></a>
+        </form>
+    </div>
+<!--JUEGO-->   
+    <div id="juego">
+        <div id="tituloJuegos">
+            <div class="div1">
+                <div class="camposJuego1" >Usuario:</div>
+                <div class="camposJuego1">Tiempo:</div>
+                <div class="camposJuego1">Problemas:</div>
+                <div class="camposJuego1">Puntos:</div>
+            </div>
+            <div class="div1">
+                <div class="camposJuego" id="usuario"></div>
+                <div class="camposJuego" id="cronometro">60</div>
+                <div class="camposJuego" id="contadorProblemas"> 0/10</div>
+                <div class="camposJuego" id="puntos">0</div>
+            </div>
+        </div>
 
+    <div id="mensaje"></div>  
+        
+        <div class="div3">
+            <div id="problema"></div>
+            <input placeholder="  " type="number" id="respuesta">
+        </div>
+    </div>
+<!--TECLADO NUMERICO-->  
+    <div id="tecladoNumerico">
+        <div>
+            <button class="numero numBoton">1</button>
+            <button class="numero numBoton">2</button>
+            <button class="numero numBoton">3</button>
+            <button class="numero numBoton">4</button>
+            <button class="numero numBoton">5</button>
+        </div>
+        <div>
+            <button class="numero numBoton">6</button>    
+            <button class="numero numBoton">7</button>
+            <button class="numero numBoton">8</button>
+            <button class="numero numBoton">9</button>
+            <button class="numero numBoton">0</button>
+    
+        </div>
+    </div>
+
+    <div class="div4">
+        <button id="borrar">Borrar</button>
+        <button id="enviarRespuesta">Responder</button>    
+    </div> 
+
+<!--RANKING-->
+    <div id="ranking">
+        <h3 id="top10">Top 10</h3>
+        <div id="listaJugadores"></div>
+    </div>
+
+    <button id="reiniciarJuego">Reiniciar Juego</button>
+        
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
